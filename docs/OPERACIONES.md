@@ -27,12 +27,9 @@
 - En la revisión visual, Guardar ocupaba la altura de la fila Detalle. Se asignó
   una fila completa a Detalle en la adaptación y se repitió la prueba.
 
-## Pendiente externo
+## Acceso a GitHub
 
-La credencial GitHub comprobada durante esta sesión es inválida. El proyecto y
-su informe quedan en un repositorio local; no se afirma que se hayan publicado.
+El acceso inicial falló. Se completó una nueva autenticación como MTNRS y se
+creó el repositorio público de la tarea.
 
-Revisión posterior: los repositorios locales siguen sin remoto configurado.
-La CLI mantiene una credencial inválida y el conector GitHub devuelve HTTP 403
-con un aviso de cuenta suspendida. La publicación queda pendiente de recuperar
-un acceso válido e indicar la cuenta u organización de destino.
+Destino del proyecto y del informe: [MTNRS/RA1-IU-Mejorado](https://github.com/MTNRS/RA1-IU-Mejorado).

@@ -2,7 +2,7 @@
 
 ## Información de generación
 
-- **Fecha:** 2026-09-21 20:26:38 +0200
+- **Fecha:** 2026-09-21 20:33:43 +0200
 - **Usuario:** dlc
 - **UID:** 1000
 - **Equipo:** kali
@@ -10,15 +10,15 @@
 - **Versión del kernel:** 6.19.11+kali-amd64
 - **Arquitectura:** x86_64
 - **Directorio de ejecución:** `/home/dlc/DAM2`
-- **Proyecto documentado:** `/tmp/revision-ra1-pdn4t6gc/RA1-IU-Mejorado`
-- **HMAC-SHA-256 de autenticidad:** `a7c77155887ca19a7f3521ff70c0735fcf8d75ac2cb1c17001fde67f12031e06`
+- **Proyecto documentado:** `/tmp/publicar-ra1-lwwm__m1/RA1-IU-Mejorado`
+- **HMAC-SHA-256 de autenticidad:** `91a784e7f82b205f752e55c8692155c5014573bafc4bd1bc0b095f4c37034693`
 
 > El HMAC-SHA-256 se calcula sobre el documento completo usando un secreto incluido en el programa y 64 ceros en el propio campo del HMAC. El secreto no se escribe en el informe. Este mecanismo permite comprobar integridad y que el documento fue generado con el mismo secreto.
 
 ## Estructura del proyecto
 
 ```
-/tmp/revision-ra1-pdn4t6gc/RA1-IU-Mejorado
+/tmp/publicar-ra1-lwwm__m1/RA1-IU-Mejorado
 ├── README.md
 ├── diseno
 │   ├── formulario-editor.json
@@ -181,6 +181,10 @@ ficticios. No se ha integrado en sistemas reales de la empresa.
 Se utilizó Codex para adaptar el código, automatizar el uso del editor visual,
 documentar y probar la aplicación. Pendiente de revisión personal antes de
 la entrega.
+
+## Repositorio de la tarea
+
+[MTNRS/RA1-IU-Mejorado](https://github.com/MTNRS/RA1-IU-Mejorado).
 ```
 ## diseno
 **formulario-editor.json**
@@ -710,15 +714,12 @@ por la existencia del repositorio local o del informe generado.
 - En la revisión visual, Guardar ocupaba la altura de la fila Detalle. Se asignó
   una fila completa a Detalle en la adaptación y se repitió la prueba.
 
-## Pendiente externo
+## Acceso a GitHub
 
-La credencial GitHub comprobada durante esta sesión es inválida. El proyecto y
-su informe quedan en un repositorio local; no se afirma que se hayan publicado.
+El acceso inicial falló. Se completó una nueva autenticación como MTNRS y se
+creó el repositorio público de la tarea.
 
-Revisión posterior: los repositorios locales siguen sin remoto configurado.
-La CLI mantiene una credencial inválida y el conector GitHub devuelve HTTP 403
-con un aviso de cuenta suspendida. La publicación queda pendiente de recuperar
-un acceso válido e indicar la cuenta u organización de destino.
+Destino del proyecto y del informe: [MTNRS/RA1-IU-Mejorado](https://github.com/MTNRS/RA1-IU-Mejorado).
 ```
 **PROCEDENCIA.md**
 ```markdown

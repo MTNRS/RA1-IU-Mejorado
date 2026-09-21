@@ -111,3 +111,7 @@ ficticios. No se ha integrado en sistemas reales de la empresa.
 Se utilizó Codex para adaptar el código, automatizar el uso del editor visual,
 documentar y probar la aplicación. Pendiente de revisión personal antes de
 la entrega.
+
+## Repositorio de la tarea
+
+[MTNRS/RA1-IU-Mejorado](https://github.com/MTNRS/RA1-IU-Mejorado).

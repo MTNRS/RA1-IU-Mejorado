@@ -1,0 +1,29 @@
+{
+  "titulo": "Solicitudes de demostración",
+  "columnas": [
+    {
+      "campo": "nombre",
+      "etiqueta": "Nombre"
+    },
+    {
+      "campo": "email",
+      "etiqueta": "Correo"
+    },
+    {
+      "campo": "asunto",
+      "etiqueta": "Asunto"
+    },
+    {
+      "campo": "prioridad",
+      "etiqueta": "Prioridad"
+    }
+  ],
+  "registros": [
+    {
+      "nombre": "Equipo Demo",
+      "email": "demo@example.com",
+      "asunto": "Preparar equipo de prueba",
+      "prioridad": "Normal"
+    }
+  ]
+}

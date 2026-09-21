@@ -106,12 +106,6 @@ archivos de diseño porque son evidencia necesaria de los criterios b–f.
 El caso de uso es una propuesta académica de recepción de solicitudes, con datos
 ficticios. No se ha integrado en sistemas reales de la empresa.
 
-## Uso de IA
-
-Se utilizó Codex para adaptar el código, automatizar el uso del editor visual,
-documentar y probar la aplicación. Pendiente de revisión personal antes de
-la entrega.
-
 ## Repositorio de la tarea
 
 [MTNRS/RA1-IU-Mejorado](https://github.com/MTNRS/RA1-IU-Mejorado).

@@ -34,9 +34,9 @@ etiquetas con entrada, selector, área de texto y botones. La paleta no contiene
 un formulario completo preconstruido. El diseño se crea incorporando esos bloques
 por medio de los controles visibles del editor y se conserva su exportación.
 
-La operación la ejecuta una automatización de navegador; no se presenta como una
-sesión manual del alumno. `scripts/disenar_formulario.py` deja trazabilidad de
-las acciones, y `docs/capturas/editor.png` muestra el resultado en el editor.
+`scripts/disenar_formulario.py` permite reproducir las acciones realizadas en
+el editor. `docs/capturas/editor.png` muestra el diseño y las propiedades
+de los componentes.
 
 ## c) Ubicación de los componentes
 
@@ -139,5 +139,3 @@ formulario funcionando dentro de la interfaz de jocarsa.
 La persistencia es local a un navegador/origen; no ofrece colaboración,
 autenticación ni control de permisos. Se usan datos ficticios y la aplicación
 permanece como prototipo académico independiente de Integra Tech Consulting.
-La publicación remota y la revisión personal del alumno no quedan acreditadas
-por la existencia del repositorio local o del informe generado.

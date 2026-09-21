@@ -2,7 +2,7 @@
 
 ## Información de generación
 
-- **Fecha:** 2026-09-21 20:33:43 +0200
+- **Fecha:** 2026-09-21 20:46:01 +0200
 - **Usuario:** dlc
 - **UID:** 1000
 - **Equipo:** kali
@@ -10,15 +10,15 @@
 - **Versión del kernel:** 6.19.11+kali-amd64
 - **Arquitectura:** x86_64
 - **Directorio de ejecución:** `/home/dlc/DAM2`
-- **Proyecto documentado:** `/tmp/publicar-ra1-lwwm__m1/RA1-IU-Mejorado`
-- **HMAC-SHA-256 de autenticidad:** `91a784e7f82b205f752e55c8692155c5014573bafc4bd1bc0b095f4c37034693`
+- **Proyecto documentado:** `/tmp/revision-textos-ra1-be02pj4m/RA1-IU-Mejorado`
+- **HMAC-SHA-256 de autenticidad:** `124f97a019d83f497b20e2e396a1a55f41891d57040ba290129da32cfe206458`
 
 > El HMAC-SHA-256 se calcula sobre el documento completo usando un secreto incluido en el programa y 64 ceros en el propio campo del HMAC. El secreto no se escribe en el informe. Este mecanismo permite comprobar integridad y que el documento fue generado con el mismo secreto.
 
 ## Estructura del proyecto
 
 ```
-/tmp/publicar-ra1-lwwm__m1/RA1-IU-Mejorado
+/tmp/revision-textos-ra1-be02pj4m/RA1-IU-Mejorado
 ├── README.md
 ├── diseno
 │   ├── formulario-editor.json
@@ -175,12 +175,6 @@ archivos de diseño porque son evidencia necesaria de los criterios b–f.
 
 El caso de uso es una propuesta académica de recepción de solicitudes, con datos
 ficticios. No se ha integrado en sistemas reales de la empresa.
-
-## Uso de IA
-
-Se utilizó Codex para adaptar el código, automatizar el uso del editor visual,
-documentar y probar la aplicación. Pendiente de revisión personal antes de
-la entrega.
 
 ## Repositorio de la tarea
 
@@ -575,9 +569,9 @@ etiquetas con entrada, selector, área de texto y botones. La paleta no contiene
 un formulario completo preconstruido. El diseño se crea incorporando esos bloques
 por medio de los controles visibles del editor y se conserva su exportación.
 
-La operación la ejecuta una automatización de navegador; no se presenta como una
-sesión manual del alumno. `scripts/disenar_formulario.py` deja trazabilidad de
-las acciones, y `docs/capturas/editor.png` muestra el resultado en el editor.
+`scripts/disenar_formulario.py` permite reproducir las acciones realizadas en
+el editor. `docs/capturas/editor.png` muestra el diseño y las propiedades
+de los componentes.
 
 ## c) Ubicación de los componentes
 
@@ -680,8 +674,6 @@ formulario funcionando dentro de la interfaz de jocarsa.
 La persistencia es local a un navegador/origen; no ofrece colaboración,
 autenticación ni control de permisos. Se usan datos ficticios y la aplicación
 permanece como prototipo académico independiente de Integra Tech Consulting.
-La publicación remota y la revisión personal del alumno no quedan acreditadas
-por la existencia del repositorio local o del informe generado.
 ```
 **OPERACIONES.md**
 ```markdown

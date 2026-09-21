@@ -96,7 +96,7 @@ Las dependencias de pruebas no son necesarias para utilizar la aplicación final
 - [Operaciones e incidencias](docs/OPERACIONES.md).
 - [Resultados de las pruebas](docs/VERIFICACION.md).
 
-Informe de `jocarsa/generador`: `Desarrollo-de-interfaces_RA1_0488.md`.
+Informe de `jocarsa/generador`: `Desarrollo-de-interfaces_RA1_0488-entrega-.md`.
 Se incluye en el repositorio junto con la aplicación. La entrada del generador
 excluye `.git`, `.venv`, `.runtime`, cachés y el propio informe. Sí incluye los
 archivos de diseño porque son evidencia necesaria de los criterios b–f.

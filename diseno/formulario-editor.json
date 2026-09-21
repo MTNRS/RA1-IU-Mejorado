@@ -1,0 +1,338 @@
+{
+  "versionEditor": "0.23.6",
+  "html": "<body><form id=\"solicitud\"><h2 id=\"idcc\">Nueva solicitud</h2><label id=\"io7s\">Nombre<input id=\"nombre\" name=\"nombre\" type=\"text\" placeholder=\"Nombre del solicitante\" required/></label><label id=\"inet\">Correo<input id=\"email\" name=\"email\" type=\"email\" placeholder=\"persona@example.com\" required/></label><label id=\"i4dpl\">Asunto<input id=\"asunto\" name=\"asunto\" type=\"text\" placeholder=\"Describe brevemente la solicitud\" required/></label><label id=\"iz20b\">Prioridad<select name=\"prioridad\"><option>Normal</option><option>Alta</option><option>Baja</option></select></label><label id=\"isl7v\">Detalle<textarea name=\"detalle\" rows=\"3\"></textarea></label><button type=\"submit\" id=\"i6jx5\">Guardar solicitud</button><button type=\"reset\" id=\"i0lab\">Limpiar</button></form></body>",
+  "css": "* { box-sizing: border-box; } body {margin: 0;}body{font-family:Arial;color:rgb(36, 50, 70);}form{display:grid;row-gap:16px;column-gap:16px;padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px;background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(255, 255, 255);}label{display:grid;row-gap:6px;column-gap:6px;}input, select, textarea, button{font-style:inherit;font-variant-ligatures:inherit;font-variant-caps:inherit;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-variant-alternates:inherit;font-variant-position:inherit;font-variant-emoji:inherit;font-weight:inherit;font-stretch:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-optical-sizing:inherit;font-size-adjust:inherit;font-kerning:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-language-override:inherit;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-top-style:solid;border-right-style:solid;border-bottom-style:solid;border-left-style:solid;border-top-color:rgb(116, 132, 153);border-right-color:rgb(116, 132, 153);border-bottom-color:rgb(116, 132, 153);border-left-color:rgb(116, 132, 153);border-image-source:initial;border-image-slice:initial;border-image-width:initial;border-image-outset:initial;border-image-repeat:initial;border-top-left-radius:5px;border-top-right-radius:5px;border-bottom-right-radius:5px;border-bottom-left-radius:5px;}button{background-image:initial;background-position-x:initial;background-position-y:initial;background-size:initial;background-repeat:initial;background-attachment:initial;background-origin:initial;background-clip:initial;background-color:rgb(41, 76, 119);color:white;}",
+  "proyecto": {
+    "dataSources": [],
+    "assets": [],
+    "styles": [
+      {
+        "selectors": [],
+        "selectorsAdd": "body",
+        "style": {
+          "font-family": "Arial",
+          "color": "rgb(36, 50, 70)"
+        }
+      },
+      {
+        "selectors": [],
+        "selectorsAdd": "form",
+        "style": {
+          "display": "grid",
+          "row-gap": "16px",
+          "column-gap": "16px",
+          "padding-top": "24px",
+          "padding-right": "24px",
+          "padding-bottom": "24px",
+          "padding-left": "24px",
+          "background-image": "initial",
+          "background-position-x": "initial",
+          "background-position-y": "initial",
+          "background-size": "initial",
+          "background-repeat": "initial",
+          "background-attachment": "initial",
+          "background-origin": "initial",
+          "background-clip": "initial",
+          "background-color": "rgb(255, 255, 255)"
+        }
+      },
+      {
+        "selectors": [],
+        "selectorsAdd": "label",
+        "style": {
+          "display": "grid",
+          "row-gap": "6px",
+          "column-gap": "6px"
+        }
+      },
+      {
+        "selectors": [],
+        "selectorsAdd": "input, select, textarea, button",
+        "style": {
+          "font-style": "inherit",
+          "font-variant-ligatures": "inherit",
+          "font-variant-caps": "inherit",
+          "font-variant-numeric": "inherit",
+          "font-variant-east-asian": "inherit",
+          "font-variant-alternates": "inherit",
+          "font-variant-position": "inherit",
+          "font-variant-emoji": "inherit",
+          "font-weight": "inherit",
+          "font-stretch": "inherit",
+          "font-size": "inherit",
+          "line-height": "inherit",
+          "font-family": "inherit",
+          "font-optical-sizing": "inherit",
+          "font-size-adjust": "inherit",
+          "font-kerning": "inherit",
+          "font-feature-settings": "inherit",
+          "font-variation-settings": "inherit",
+          "font-language-override": "inherit",
+          "padding-top": "10px",
+          "padding-right": "10px",
+          "padding-bottom": "10px",
+          "padding-left": "10px",
+          "border-top-width": "1px",
+          "border-right-width": "1px",
+          "border-bottom-width": "1px",
+          "border-left-width": "1px",
+          "border-top-style": "solid",
+          "border-right-style": "solid",
+          "border-bottom-style": "solid",
+          "border-left-style": "solid",
+          "border-top-color": "rgb(116, 132, 153)",
+          "border-right-color": "rgb(116, 132, 153)",
+          "border-bottom-color": "rgb(116, 132, 153)",
+          "border-left-color": "rgb(116, 132, 153)",
+          "border-image-source": "initial",
+          "border-image-slice": "initial",
+          "border-image-width": "initial",
+          "border-image-outset": "initial",
+          "border-image-repeat": "initial",
+          "border-top-left-radius": "5px",
+          "border-top-right-radius": "5px",
+          "border-bottom-right-radius": "5px",
+          "border-bottom-left-radius": "5px"
+        }
+      },
+      {
+        "selectors": [],
+        "selectorsAdd": "button",
+        "style": {
+          "background-image": "initial",
+          "background-position-x": "initial",
+          "background-position-y": "initial",
+          "background-size": "initial",
+          "background-repeat": "initial",
+          "background-attachment": "initial",
+          "background-origin": "initial",
+          "background-clip": "initial",
+          "background-color": "rgb(41, 76, 119)",
+          "color": "white"
+        }
+      }
+    ],
+    "pages": [
+      {
+        "frames": [
+          {
+            "component": {
+              "type": "wrapper",
+              "stylable": [
+                "background",
+                "background-color",
+                "background-image",
+                "background-repeat",
+                "background-attachment",
+                "background-position",
+                "background-size"
+              ],
+              "components": [
+                {
+                  "tagName": "form",
+                  "attributes": {
+                    "id": "solicitud"
+                  },
+                  "components": [
+                    {
+                      "tagName": "h2",
+                      "type": "text",
+                      "attributes": {
+                        "id": "idcc"
+                      },
+                      "components": [
+                        {
+                          "type": "textnode",
+                          "content": "Nueva solicitud"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "label",
+                      "attributes": {
+                        "id": "io7s"
+                      },
+                      "components": [
+                        {
+                          "type": "textnode",
+                          "content": "Nombre"
+                        },
+                        {
+                          "tagName": "input",
+                          "type": "campo-solicitud",
+                          "void": true,
+                          "attributes": {
+                            "id": "nombre",
+                            "name": "nombre",
+                            "type": "text",
+                            "placeholder": "Nombre del solicitante",
+                            "required": true
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "label",
+                      "attributes": {
+                        "id": "inet"
+                      },
+                      "components": [
+                        {
+                          "type": "textnode",
+                          "content": "Correo"
+                        },
+                        {
+                          "tagName": "input",
+                          "type": "campo-solicitud",
+                          "void": true,
+                          "attributes": {
+                            "id": "email",
+                            "name": "email",
+                            "type": "email",
+                            "placeholder": "persona@example.com",
+                            "required": true
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "label",
+                      "attributes": {
+                        "id": "i4dpl"
+                      },
+                      "components": [
+                        {
+                          "type": "textnode",
+                          "content": "Asunto"
+                        },
+                        {
+                          "tagName": "input",
+                          "type": "campo-solicitud",
+                          "void": true,
+                          "attributes": {
+                            "id": "asunto",
+                            "name": "asunto",
+                            "type": "text",
+                            "placeholder": "Describe brevemente la solicitud",
+                            "required": true
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "label",
+                      "attributes": {
+                        "id": "iz20b"
+                      },
+                      "components": [
+                        {
+                          "type": "textnode",
+                          "content": "Prioridad"
+                        },
+                        {
+                          "tagName": "select",
+                          "attributes": {
+                            "name": "prioridad"
+                          },
+                          "components": [
+                            {
+                              "tagName": "option",
+                              "type": "text",
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "Normal"
+                                }
+                              ]
+                            },
+                            {
+                              "tagName": "option",
+                              "type": "text",
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "Alta"
+                                }
+                              ]
+                            },
+                            {
+                              "tagName": "option",
+                              "type": "text",
+                              "components": [
+                                {
+                                  "type": "textnode",
+                                  "content": "Baja"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "label",
+                      "attributes": {
+                        "id": "isl7v"
+                      },
+                      "components": [
+                        {
+                          "type": "textnode",
+                          "content": "Detalle"
+                        },
+                        {
+                          "tagName": "textarea",
+                          "attributes": {
+                            "name": "detalle",
+                            "rows": "3"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "tagName": "button",
+                      "type": "text",
+                      "attributes": {
+                        "type": "submit",
+                        "id": "i6jx5"
+                      },
+                      "components": [
+                        {
+                          "type": "textnode",
+                          "content": "Guardar solicitud"
+                        }
+                      ]
+                    },
+                    {
+                      "tagName": "button",
+                      "type": "text",
+                      "attributes": {
+                        "type": "reset",
+                        "id": "i0lab"
+                      },
+                      "components": [
+                        {
+                          "type": "textnode",
+                          "content": "Limpiar"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "head": {
+                "type": "head"
+              },
+              "docEl": {
+                "tagName": "html"
+              }
+            },
+            "id": "SCTnAID9yEqsndvh"
+          }
+        ],
+        "type": "main",
+        "id": "fSDlaR5oGulxqw5x"
+      }
+    ],
+    "symbols": []
+  }
+}

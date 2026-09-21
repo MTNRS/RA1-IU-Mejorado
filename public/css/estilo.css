@@ -921,3 +921,18 @@ body.ju-library-page .library-section .contenido-columna > a {
   min-width:40px;
   max-width:40px;
 }
+
+/* Adaptación del formulario exportado: alcance limitado a esta vista. */
+#solicitud { width: min(100%, 850px); margin: 0 auto; padding: 24px; background: white; border-radius: 10px; align-content: start; }
+#solicitud label { display: grid; gap: 6px; }
+#solicitud input, #solicitud select, #solicitud textarea { width: 100%; min-width: 0; padding: 10px; font: inherit; }
+#solicitud h2 { margin: 0; }
+#solicitud button { min-height: 44px; }
+#estadoFormulario { min-height: 1.5em; }
+:focus-visible { outline: 3px solid #d58218; outline-offset: 2px; }
+@media (max-width: 700px) {
+  body.jocarsa-iu > header { height: auto; flex-wrap: wrap; gap: 10px; }
+  #usuario, #entidades, .separador { display: none; }
+  #navegacion { width: 110px; flex-basis: 110px; }
+  #solicitud { display: grid; grid-template-columns: 1fr; padding: 12px; }
+}

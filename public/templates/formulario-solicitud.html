@@ -1,0 +1,22 @@
+<form id="solicitud" class="ju-form-grid">
+<h2 class="ju-form-full">Nueva solicitud</h2>
+<label>Nombre<input id="nombre" name="nombre" maxlength="80" autocomplete="name" type="text" placeholder="Nombre del solicitante" required/>
+</label>
+<label>Correo<input id="email" name="email" maxlength="120" autocomplete="email" type="email" placeholder="persona@example.com" required/>
+</label>
+<label>Asunto<input id="asunto" name="asunto" maxlength="120" type="text" placeholder="Describe brevemente la solicitud" required/>
+</label>
+<label>Prioridad<select name="prioridad">
+<option>Normal</option>
+<option>Alta</option>
+<option>Baja</option>
+</select>
+</label>
+<label class="ju-form-full">Detalle<textarea name="detalle" maxlength="1000" rows="3">
+</textarea>
+</label>
+<button class="ju-btn" type="submit">Guardar solicitud</button>
+<button class="ju-btn secondary" type="reset">Limpiar</button>
+<p id="estadoFormulario" class="ju-form-full" role="status">
+</p>
+</form>

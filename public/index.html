@@ -6,19 +6,19 @@
   <title>
    jocarsa | iu mejorado
   </title>
-  
+
   <link href="css/estilo.css" rel="stylesheet"/>
  </head>
  <body class="jocarsa-iu">
   <header>
    <div class="corporativo">
-    
+
     <h1>
      jocarsa | iu mejorado
     </h1>
    </div>
    <div id="herramientas">
-    <input id="buscador" placeholder="Buscar solicitudes…" type="search"/>
+    <input aria-label="Buscar solicitudes" id="buscador" placeholder="Buscar solicitudes…" type="search"/>
     <button id="nuevo">
      + Nuevo
     </button>
@@ -30,7 +30,7 @@
      <p>
       Usuario de demostración
      </p>
-     <a href="#formulario">
+     <a href="#formulario" id="abrirFormulario">
       Formulario
      </a>
     </div>
@@ -84,6 +84,7 @@
    <tr>
    </tr>
   </template>
+  <script src="js/solicitudes.js"></script>
   <script src="js/componentes.js">
   </script>
  </body>

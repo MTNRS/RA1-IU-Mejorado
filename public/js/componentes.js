@@ -100,15 +100,18 @@ window.jocarsa.iu = window.jocarsa.iu || {};
       const toast = document.createElement("article");
 
       toast.className = `ju-toast is-${tipo}`;
+      toast.setAttribute("role", "status");
       toast.innerHTML = `
         <div class="ju-toast-icon">${this.iconos[tipo] || "i"}</div>
         <div>
-          <p class="ju-toast-title">${titulo}</p>
-          <p class="ju-toast-text">${texto}</p>
+          <p class="ju-toast-title"></p>
+          <p class="ju-toast-text"></p>
         </div>
-        <button class="ju-toast-close" type="button">×</button>
+        <button class="ju-toast-close" type="button" aria-label="Cerrar aviso">×</button>
       `;
 
+      DOM.uno(".ju-toast-title", toast).textContent = titulo;
+      DOM.uno(".ju-toast-text", toast).textContent = texto;
       const cerrar = () => {
         toast.classList.add("is-leaving");
         setTimeout(() => toast.remove(), 240);
@@ -215,6 +218,8 @@ window.jocarsa.iu = window.jocarsa.iu || {};
       this.estado = new EstadoIU();
       this.toast = new ToastIU();
       this.columnas = new GestorColumnas();
+      this.almacen = new window.jocarsa.iu.AlmacenSolicitudes();
+      this.cambioVista = 0;
     }
 
     async iniciar() {
@@ -231,6 +236,11 @@ window.jocarsa.iu = window.jocarsa.iu || {};
           OrigenDatos.cargarJSON("data/datos.json")
         ]);
 
+        try {
+          this.estado.clientes.registros = this.almacen.cargar(this.estado.clientes.registros);
+        } catch (error) {
+          this.toast.mostrar("warning", "Almacenamiento local", "No se pudo leer el almacenamiento. Se muestran datos de demostración.");
+        }
         this.renderMenu();
         this.renderEntidades();
         this.mostrarTabla();
@@ -309,6 +319,7 @@ window.jocarsa.iu = window.jocarsa.iu || {};
     }
 
     mostrarTabla(filtro = "") {
+      this.cambioVista++;
       const datos = this.estado.clientes;
       const registros = datos.registros.filter((registro) =>
         Object.values(registro)
@@ -351,61 +362,51 @@ window.jocarsa.iu = window.jocarsa.iu || {};
       escenario.appendChild(tabla);
     }
 
-    mostrarFormularioUI() {
+    async mostrarFormularioUI() {
+      const turno = ++this.cambioVista;
       const escenario = DOM.uno("#escenario");
-
-      escenario.innerHTML = `
-        <article class="ju-card">
-          <h2>Librería · Formularios</h2>
-          <p>Controles reutilizables con el lenguaje visual jocarsa-iu.</p>
-          <form id="demoForm" class="ju-form-grid">
-            <label>
-              <span>Nombre</span>
-              <input name="nombre" required>
-            </label>
-            <label>
-              <span>Email</span>
-              <input name="email" type="email" required>
-            </label>
-            <label>
-              <span>Tipo</span>
-              <select name="tipo">
-                <option>Cliente</option>
-                <option>Proveedor</option>
-                <option>Alumno</option>
-              </select>
-            </label>
-            <label>
-              <span>Fecha</span>
-              <input name="fecha" type="date">
-            </label>
-            <label class="ju-form-full">
-              <span>Descripción</span>
-              <textarea name="descripcion"></textarea>
-            </label>
-            <label class="ju-check ju-form-full">
-              <input type="checkbox" name="activo">
-              <span>Registro activo</span>
-            </label>
-            <div class="ju-form-full ju-button-row">
-              <button class="ju-btn" type="submit">Guardar</button>
-              <button class="ju-btn secondary" type="reset">Limpiar</button>
-            </div>
-          </form>
-        </article>
-      `;
-
-      DOM.uno("#demoForm").addEventListener("submit", (evento) => {
-        evento.preventDefault();
-        this.toast.mostrar(
-          "success",
-          "Formulario guardado",
-          "El evento submit se ha capturado correctamente."
-        );
-      });
+      escenario.textContent = "Cargando formulario…";
+      try {
+        const respuesta = await fetch("templates/formulario-solicitud.html");
+        if (!respuesta.ok) throw new Error("No se pudo cargar la plantilla");
+        const html = await respuesta.text();
+        if (turno !== this.cambioVista) return;
+        escenario.innerHTML = html;
+        const formulario = DOM.uno("#solicitud");
+        const mensaje = DOM.uno("#estadoFormulario");
+        formulario.addEventListener("submit", (evento) => {
+          evento.preventDefault();
+          if (!formulario.reportValidity()) return;
+          const registro = Object.fromEntries(new FormData(formulario));
+          for (const campo of Object.keys(registro)) registro[campo] = registro[campo].trim();
+          if (!registro.nombre || !registro.email || !registro.asunto) {
+            mensaje.textContent = "Nombre, correo y asunto no pueden estar vacíos.";
+            return;
+          }
+          const nuevos = [...this.estado.clientes.registros, registro];
+          try {
+            this.almacen.guardar(nuevos);
+          } catch (error) {
+            mensaje.textContent = "No se pudo guardar en este navegador. Los datos siguen en el formulario.";
+            this.toast.mostrar("danger", "No guardado", "Comprueba el almacenamiento del navegador.");
+            return;
+          }
+          this.estado.clientes.registros = nuevos;
+          this.estado.seleccion = "Listado";
+          DOM.uno("#buscador").value = "";
+          this.renderEntidades();
+          this.mostrarTabla();
+          this.toast.mostrar("success", "Solicitud guardada", "La solicitud se ha guardado en este navegador.");
+        });
+        formulario.addEventListener("reset", () => { mensaje.textContent = "Formulario limpiado."; });
+        DOM.uno("#nombre").focus();
+      } catch (error) {
+        if (turno === this.cambioVista) escenario.textContent = "No se pudo cargar el formulario. Inténtalo de nuevo.";
+      }
     }
 
     mostrarLoginDemo() {
+      this.cambioVista++;
       const escenario = DOM.uno("#escenario");
 
       escenario.innerHTML = `
@@ -452,6 +453,7 @@ window.jocarsa.iu = window.jocarsa.iu || {};
     }
 
     mostrarToastsDemo() {
+      this.cambioVista++;
       const escenario = DOM.uno("#escenario");
 
       escenario.innerHTML = `
@@ -486,12 +488,16 @@ window.jocarsa.iu = window.jocarsa.iu || {};
     }
 
     activarEventos() {
+      DOM.uno("#abrirFormulario").addEventListener("click", evento => {
+        evento.preventDefault();
+        this.mostrarFormularioUI();
+      });
       DOM.uno("#buscador").addEventListener("input", (evento) => {
         this.mostrarTabla(evento.target.value);
       });
 
       DOM.uno("#nuevo").addEventListener("click", () => {
-        this.estado.seleccion = "Elemento";
+        this.estado.seleccion = "Formulario";
         this.renderEntidades();
         this.mostrarFormularioUI();
       });

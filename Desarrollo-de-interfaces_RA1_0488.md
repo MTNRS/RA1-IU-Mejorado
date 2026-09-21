@@ -2,23 +2,23 @@
 
 ## Información de generación
 
-- **Fecha:** 2026-09-21 20:22:19 +0200
+- **Fecha:** 2026-09-21 20:26:38 +0200
 - **Usuario:** dlc
 - **UID:** 1000
 - **Equipo:** kali
 - **Sistema operativo:** Linux
 - **Versión del kernel:** 6.19.11+kali-amd64
 - **Arquitectura:** x86_64
-- **Directorio de ejecución:** `/home/dlc/RA1-IU-Mejorado`
-- **Proyecto documentado:** `/tmp/iu-final-i5o1s_fb/RA1-IU-Mejorado`
-- **HMAC-SHA-256 de autenticidad:** `0bed47f0a315df0db9f167d3eed4be7cd3206993b598308993a8a689cfdf4489`
+- **Directorio de ejecución:** `/home/dlc/DAM2`
+- **Proyecto documentado:** `/tmp/revision-ra1-pdn4t6gc/RA1-IU-Mejorado`
+- **HMAC-SHA-256 de autenticidad:** `a7c77155887ca19a7f3521ff70c0735fcf8d75ac2cb1c17001fde67f12031e06`
 
 > El HMAC-SHA-256 se calcula sobre el documento completo usando un secreto incluido en el programa y 64 ceros en el propio campo del HMAC. El secreto no se escribe en el informe. Este mecanismo permite comprobar integridad y que el documento fue generado con el mismo secreto.
 
 ## Estructura del proyecto
 
 ```
-/tmp/iu-final-i5o1s_fb/RA1-IU-Mejorado
+/tmp/revision-ra1-pdn4t6gc/RA1-IU-Mejorado
 ├── README.md
 ├── diseno
 │   ├── formulario-editor.json
@@ -171,15 +171,16 @@ Se incluye en el repositorio junto con la aplicación. La entrada del generador
 excluye `.git`, `.venv`, `.runtime`, cachés y el propio informe. Sí incluye los
 archivos de diseño porque son evidencia necesaria de los criterios b–f.
 
-## Relación con Integra Tech Consulting y uso de IA
+## Relación con Integra Tech Consulting
 
 El caso de uso es una propuesta académica de recepción de solicitudes, con datos
 ficticios. No se ha integrado en sistemas reales de la empresa.
 
-Codex ha ayudado a adaptar el código del profesor, operar el editor mediante
-automatización del navegador, documentar y probar la aplicación. El alumno debe
-revisar y comprender el trabajo antes de entregarlo; esa revisión personal no
-queda acreditada por las pruebas automáticas.
+## Uso de IA
+
+Se utilizó Codex para adaptar el código, automatizar el uso del editor visual,
+documentar y probar la aplicación. Pendiente de revisión personal antes de
+la entrega.
 ```
 ## diseno
 **formulario-editor.json**
@@ -713,6 +714,11 @@ por la existencia del repositorio local o del informe generado.
 
 La credencial GitHub comprobada durante esta sesión es inválida. El proyecto y
 su informe quedan en un repositorio local; no se afirma que se hayan publicado.
+
+Revisión posterior: los repositorios locales siguen sin remoto configurado.
+La CLI mantiene una credencial inválida y el conector GitHub devuelve HTTP 403
+con un aviso de cuenta suspendida. La publicación queda pendiente de recuperar
+un acceso válido e indicar la cuenta u organización de destino.
 ```
 **PROCEDENCIA.md**
 ```markdown

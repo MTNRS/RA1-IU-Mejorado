@@ -101,12 +101,13 @@ Se incluye en el repositorio junto con la aplicación. La entrada del generador
 excluye `.git`, `.venv`, `.runtime`, cachés y el propio informe. Sí incluye los
 archivos de diseño porque son evidencia necesaria de los criterios b–f.
 
-## Relación con Integra Tech Consulting y uso de IA
+## Relación con Integra Tech Consulting
 
 El caso de uso es una propuesta académica de recepción de solicitudes, con datos
 ficticios. No se ha integrado en sistemas reales de la empresa.
 
-Codex ha ayudado a adaptar el código del profesor, operar el editor mediante
-automatización del navegador, documentar y probar la aplicación. El alumno debe
-revisar y comprender el trabajo antes de entregarlo; esa revisión personal no
-queda acreditada por las pruebas automáticas.
+## Uso de IA
+
+Se utilizó Codex para adaptar el código, automatizar el uso del editor visual,
+documentar y probar la aplicación. Pendiente de revisión personal antes de
+la entrega.

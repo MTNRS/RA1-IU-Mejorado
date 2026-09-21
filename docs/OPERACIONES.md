@@ -31,3 +31,8 @@
 
 La credencial GitHub comprobada durante esta sesión es inválida. El proyecto y
 su informe quedan en un repositorio local; no se afirma que se hayan publicado.
+
+Revisión posterior: los repositorios locales siguen sin remoto configurado.
+La CLI mantiene una credencial inválida y el conector GitHub devuelve HTTP 403
+con un aviso de cuenta suspendida. La publicación queda pendiente de recuperar
+un acceso válido e indicar la cuenta u organización de destino.
